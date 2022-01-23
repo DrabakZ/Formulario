@@ -33,22 +33,46 @@
 
     <script>
         function fnCuadrado() {
-            var area = document.getElementById("base").value;
-            console.log("area", area * area)
-            document.getElementById("areacuadrado").innerHTML = area * area;
+            var areacua = document.getElementById("areacuadrado").value;
+            console.log("areac", areacua * areacua)
+            document.getElementById("area").innerHTML = areacua * areacua;
         }
     </script>
     <div>
-        <h1>AREA DEL CUADRADO</h1>
-        <input type="text" id="basecuadrado" placeholder="base">
+        <h1>AREA DEL CUADRADO </h1>
+        
+        <input type="text" name="base" id="areacuadrado" value="" placeholder="base">
         <button onclick="fnCuadrado()">CALCULAR</button>
-        <p></p>
-        <span id="areacuadrado">
-        </span>
+        <span id="area"> </span>
 
+        <h1>VOLUMEN DEL CUADRADO</h1>
+        <input type="text" name="lado" id="base" value="" placeholder="base">
+        <button onclick="volcuadrado()">CALCULAR</button>
+        <span id="volumen"></span>
 
+        <script> function volcuadrado() {
+            var vol = document.getElementById("base").value;
+            console.log("volumen", vol**3)
+            document.getElementById("volumen").innerHTML = vol**3
+        }</script>
     </div>
+
     <div>
+        <h1>VOLUMEN DEL RECTANGULO</h1>
+        <input type="text" name="largo" id="base1" value="" placeholder="largo">
+        <input type="text" name="ancho" id="ancho" value="" placeholder="ancho">
+        <input type="text" name="altura" id="altura" value="" placeholder="altura">
+        <button onclick="volrec()">CALCULAR</button>
+        <span id="volumenrectangulo"> </span>
+
+        <script> function volrec(){
+            var largorec = document.getElementById("base1"). value;
+            var anchorec = document.getElementById("ancho"). value;
+            var alturarec = document.getElementById("altura"). value;
+            console.log ("volumen", (largorec * anchorec) * alturarec)
+            document.getElementById("volumenrectangulo").innerHTML = (largorec*anchorec) * alturarec
+        }</script>
+
         <h1>AREA DEL RECTANGULO</h1>
         <input type="text" name="base" id="baserectangulo" value="" placeholder="base" />
         <input type="text" name="altura" id="alturarectangulo" value="" placeholder="altura" />
@@ -59,12 +83,11 @@
             var alturarec = document.getElementById("alturarectangulo").value;
             var baserec =document.getElementById("baserectangulo").value;
             console.log ("area", baserec, alturarec )
-            document.getElementById("arearectangulo").innerHTML = baserec * alturarec
-
-                
+            document.getElementById("arearectangulo").innerHTML = baserec * alturarec       
             }
         </script>
     </div>
+
     <div>
         <h1>AREA DEL TRIANGULO</h1>
         <input type="text" name="base" id="basetriangulo" value="" placeholder="base">
@@ -80,6 +103,22 @@
            }
         </script>
 
+        <h1>VOLUMEN DEL TRIANGULO</h1>
+        <input type="text" name="baset" id="baset" value="" placeholder="base">
+        <input type="text" name="alturat" id="alturat" value="" placeholder="altura">
+        <input type="text" name="profundidadt" id="profundidadt" value="" placeholder="profundidad">
+        <button onclick="voltri()">CALCULAR</button>
+        <span id="volumentriangulo"></span>
+
+        <script> function voltri() {
+            var baset = document.getElementById("baset").value;
+        var alturat = document.getElementById("alturat").value;
+        var profunt = document.getElementById("profundidadt").value;
+        console.log ("volumen", (baset*alturat/2) * profunt ) 
+        document.getElementById("volumentriangulo").innerHTML =  (baset*alturat/2) * profunt
+        }
+        </script>
+
     </div>
     <div>
         <h1>AREA DEL CIRCULO</h1>
@@ -91,11 +130,19 @@
             var acirculo = document.getElementById("medida").value;
             console.log ("area", 3.1416, (acirculo**2))
             document.getElementById("areacirculo").innerHTML= 3.1416 * (acirculo**2)
-
          }
-
-
         </script>
+
+        <h1>VOLUMEN DEL CIRCULO</h1>
+        <input type="text" name="diametroc" id="diametrocir" value="" placeholder="diametro">
+        <button onclick="volcir()">CALCULAR</button>
+        <span id="volumencirculo"></span>
+
+        <script> function volcir() {
+            var vcir = document.getElementById("diametrocir").value;
+            console.log ("volumen", (4/3) * 3.1416 * vcir**3)
+            document.getElementById("volumencirculo").innerHTML = (4/3) * 3.1416 * vcir**3
+        }</script>
     </div>
 </body>
 
