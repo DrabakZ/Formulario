@@ -1,1 +1,39 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <script>
+        function imprimirInformacion(){
+            var nombre = document.getElementById("nombre").value;
+            console.log("MI FORMULARIO ", nombre)
+
+            document.getElementById("resultado").value = nombre
+            document.getElementById("resultado").innerHTML = nombre;
+        }
+    </script>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+    <div>
+        <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre"/>
+        <input type="number" name="apaterno" id="apaterno" value="" placeholder="Apellido Paterno"/>
+        <input type="password"  name="amaterno" id="amaterno" value="" placeholder="Apellido Materno"/>
+        <hr />
+        <span id="resultado">
+            MENSAJE
+        </span>
+        <button onclick="imprimirInformacion()"> GUARDAR</button>
+    </div>
+    <div>
+        <h1>AREA DEL CUADRADO</h1>
+        <input type="text"id="base" placeholder="base">
+        <button onclick="areaCuadrado()">CALCULAR</button>
+        <p></p>
+        <span id="areaCuadrado" />
+    </div>
+</body>
+</html>
