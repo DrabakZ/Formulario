@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
     <script>
-        function imprimirInformacion(){
+        function imprimirInformacion() {
             var nombre = document.getElementById("nombre").value;
             console.log("MI FORMULARIO ", nombre)
 
@@ -16,24 +17,86 @@
         }
     </script>
 </head>
+
 <body>
     <h1>FORMULARIO</h1>
     <div>
-        <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre"/>
-        <input type="number" name="apaterno" id="apaterno" value="" placeholder="Apellido Paterno"/>
-        <input type="password"  name="amaterno" id="amaterno" value="" placeholder="Apellido Materno"/>
+        <input type="text" name="nombre" id="nombre" value="" placeholder="Nombre" />
+        <input type="number" name="apaterno" id="apaterno" value="" placeholder="Apellido Paterno" />
+        <input type="password" name="amaterno" id="amaterno" value="" placeholder="Apellido Materno" />
         <hr />
         <span id="resultado">
             MENSAJE
         </span>
         <button onclick="imprimirInformacion()"> GUARDAR</button>
     </div>
+
+    <script>
+        function fnCuadrado() {
+            var area = document.getElementById("base").value;
+            console.log("area", area * area)
+            document.getElementById("areacuadrado").innerHTML = area * area;
+        }
+    </script>
     <div>
         <h1>AREA DEL CUADRADO</h1>
-        <input type="text"id="base" placeholder="base">
-        <button onclick="areaCuadrado()">CALCULAR</button>
+        <input type="text" id="basecuadrado" placeholder="base">
+        <button onclick="fnCuadrado()">CALCULAR</button>
         <p></p>
-        <span id="areaCuadrado" />
+        <span id="areacuadrado">
+        </span>
+
+
+    </div>
+    <div>
+        <h1>AREA DEL RECTANGULO</h1>
+        <input type="text" name="base" id="baserectangulo" value="" placeholder="base" />
+        <input type="text" name="altura" id="alturarectangulo" value="" placeholder="altura" />
+        <button onclick="fnrectangulo()">CALCULAR</button>
+        <span id="arearectangulo"></span>
+
+        <script> function fnrectangulo() {
+            var alturarec = document.getElementById("alturarectangulo").value;
+            var baserec =document.getElementById("baserectangulo").value;
+            console.log ("area", baserec, alturarec )
+            document.getElementById("arearectangulo").innerHTML = baserec * alturarec
+
+                
+            }
+        </script>
+    </div>
+    <div>
+        <h1>AREA DEL TRIANGULO</h1>
+        <input type="text" name="base" id="basetriangulo" value="" placeholder="base">
+        <input type="text" name="altura" id="alturatriangulo" value="" placeholder="altura">
+        <button onclick="fntriangulo()">CALCULAR</button>
+        <span id="areatriangulo"></span>
+
+        <script> function fntriangulo() {
+            var basetri = document.getElementById("basetriangulo").value;
+            var alturatri = document.getElementById("alturatriangulo").value;
+            console.log ("area", basetri,alturatri/2)
+            document.getElementById("areatriangulo").innerHTML= basetri * alturatri /2
+           }
+        </script>
+
+    </div>
+    <div>
+        <h1>AREA DEL CIRCULO</h1>
+        <input type="text" name= "radio" id="medida" value="" placeholder="diametro">
+        <button onclick="areacirculo()">CALCULAR</button>
+        <span id="areacirculo"></span>
+
+        <script> function areacirculo() {
+            var acirculo = document.getElementById("medida").value;
+            console.log ("area", 3.1416, (acirculo**2))
+            document.getElementById("areacirculo").innerHTML= 3.1416 * (acirculo**2)
+
+         }
+
+
+        </script>
     </div>
 </body>
+
 </html>
